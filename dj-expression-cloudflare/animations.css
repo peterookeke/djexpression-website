@@ -1,0 +1,148 @@
+/* DJ Expression — Motion & Entrance Animations */
+/* Load-time entrance animations for hero + scroll-triggered reveals */
+
+/* ===== HEADER ENTRANCE ===== */
+@keyframes header-slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: header-slide-down 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+/* ===== HERO ENTRANCE ANIMATIONS ===== */
+
+/* Scale-in: logo reveal */
+@keyframes scale-in {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.anim-scale-in {
+  animation: scale-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* Fade-up: text & buttons */
+@keyframes fade-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered delays for sequential reveal */
+.anim-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.anim-delay-3 {
+  animation-delay: 0.85s;
+}
+
+.anim-delay-4 {
+  animation-delay: 1.1s;
+}
+
+/* ===== SUBTLE HERO BG PARALLAX ===== */
+@keyframes hero-bg-drift {
+  0%   { transform: scale(1.05); }
+  100% { transform: scale(1.0); }
+}
+
+.hero__bg {
+  animation: hero-bg-drift 2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== GOLD SHIMMER on brand logo ===== */
+@keyframes shimmer-glow {
+  0%, 100% { filter: drop-shadow(0 0 0px transparent); }
+  50% { filter: drop-shadow(0 0 18px rgba(212, 168, 68, 0.35)); }
+}
+
+.hero__brand-logo {
+  animation: scale-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both,
+             shimmer-glow 3s ease-in-out 1.5s infinite;
+}
+
+/* ===== SOCIAL ICONS — stagger on load ===== */
+.hero__socials .social-link {
+  opacity: 0;
+  animation: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero__socials .social-link:nth-child(1) { animation-delay: 1.15s; }
+.hero__socials .social-link:nth-child(2) { animation-delay: 1.22s; }
+.hero__socials .social-link:nth-child(3) { animation-delay: 1.29s; }
+.hero__socials .social-link:nth-child(4) { animation-delay: 1.36s; }
+.hero__socials .social-link:nth-child(5) { animation-delay: 1.43s; }
+.hero__socials .social-link:nth-child(6) { animation-delay: 1.50s; }
+.hero__socials .social-link:nth-child(7) { animation-delay: 1.57s; }
+.hero__socials .social-link:nth-child(8) { animation-delay: 1.64s; }
+
+/* ===== STATS BAR ENTRANCE ===== */
+@keyframes count-reveal {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.stats-bar > div {
+  opacity: 0;
+  animation: count-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stats-bar > div:nth-child(1) { animation-delay: 1.6s; }
+.stats-bar > div:nth-child(2) { animation-delay: 1.75s; }
+.stats-bar > div:nth-child(3) { animation-delay: 1.9s; }
+.stats-bar > div:nth-child(4) { animation-delay: 2.05s; }
+
+/* ===== SERVICE CARDS — stagger on scroll ===== */
+.services-grid .service-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-grid .service-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Expression — Live to Express Not Impress</title>
+<meta name="description" content="DJ Expression — Premium DJ services for weddings, birthdays, corporate events, and private parties in the Denton, Texas area. Book your unforgettable event today.">
+<meta property="og:title" content="DJ Expression — Live to Express Not Impress">
+<meta property="og:description" content="Premium DJ services for weddings, birthdays, corporate events, and private parties.">
+<meta property="og:type" content="website">
+
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./animations.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header__inner header__inner--centered">
+    <a href="#home" class="header__logo header__logo--centered" onclick="return scrollToSection('home', event)">
+      <svg viewBox="0 0 280 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="DJ Expression" class="header__logo-svg">
+        <!-- DJ -->
+        <text x="0" y="30" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="1">DJ</text>
+        <!-- E with red X overlay -->
+        <text x="48" y="30" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="28" fill="#d4a844" letter-spacing="0.5">E</text>
+        <line x1="48" y1="6" x2="68" y2="32" stroke="#c81e1e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="68" y1="6" x2="48" y2="32" stroke="#c81e1e" stroke-width="3" stroke-linecap="round"/>
+        <!-- XPRESSION -->
+        <text x="65" y="30" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="28" fill="#d4a844" letter-spacing="0.5">XPRESSION</text>
+      </svg>
+    </a>
+    <button class="nav__toggle" onclick="toggleNav()" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav nav--drawer" id="mainNav" aria-label="Primary">
+    <button class="nav__close" onclick="toggleNav()" aria-label="Close menu">&times;</button>
+    <a href="#home" class="nav__link nav__link--active" onclick="return scrollToSection('home', event)" data-nav="home">Home</a>
+    <a href="#calendar" class="nav__link" onclick="return scrollToSection('calendar', event)" data-nav="calendar">Availability</a>
+    <a href="#media" class="nav__link" onclick="return scrollToSection('media', event)" data-nav="media">Media</a>
+    <a href="#reviews" class="nav__link" onclick="return scrollToSection('reviews', event)" data-nav="reviews">Reviews</a>
+    <a href="#merch" class="nav__link" onclick="return scrollToSection('merch', event)" data-nav="merch">Merch</a>
+    <a href="#files" class="nav__link" onclick="return scrollToSection('files', event)" data-nav="files">Event Files</a>
+    <a href="#calendar" class="nav__link nav__link--cta" onclick="return scrollToSection('calendar', event)">Book Now</a>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+</header>
+
+<!-- Editor Mode toolbar (hidden until activated) -->
+<div id="editorBar" class="editor-bar" style="display:none;" aria-hidden="true">
+  <span class="editor-bar__title">Editor Mode</span>
+  <span class="editor-bar__hint">Click any text to edit. Drag the &#x2630; handle on a section to reorder.</span>
+  <button class="editor-bar__btn" onclick="saveEditorChanges()">Save</button>
+  <button class="editor-bar__btn editor-bar__btn--ghost" onclick="resetEditorChanges()">Reset</button>
+  <button class="editor-bar__btn editor-bar__btn--ghost" onclick="exitEditorMode()">Exit</button>
+</div>
+
+<!-- HOME PAGE / Hero -->
+<main id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <img src="./assets/expression-logo.jpg" alt="Expression - Live to Express Not Impress" class="hero__brand-logo anim-scale-in">
+      <p class="hero__subtitle anim-fade-up anim-delay-2" data-editable>Premium DJ services for weddings, birthdays, corporate events, and private celebrations in the DFW area.</p>
+      <div class="hero__actions anim-fade-up anim-delay-3">
+        <a href="#calendar" class="btn btn--primary" onclick="return scrollToSection('calendar', event)">
+          <i data-lucide="calendar" style="width:18px;height:18px"></i>
+          Check Availability
+        </a>
+        <a href="#media" class="btn btn--outline" onclick="return scrollToSection('media', event)">
+          <i data-lucide="play" style="width:18px;height:18px"></i>
+          Watch Highlights
+        </a>
+      </div>
+      <!-- Social Media Links -->
+      <div class="hero__socials anim-fade-up anim-delay-4">
+        <a href="https://www.instagram.com/djexpression/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@djexpression_" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.78a8.28 8.28 0 0 0 4.76 1.5V6.83a4.84 4.84 0 0 1-1-.14z"/></svg>
+        </a>
+        <a href="https://twitter.com/djexpression500" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter @djexpression500" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@djexpression500" target="_blank" rel="noopener noreferrer" aria-label="YouTube @djexpression500" class="social-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/djexpression500/" target="_blank" rel="noopener noreferrer" aria-label="Facebook @djexpression500" class="social-link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://open.spotify.com/artist/djexpression" target="_blank" rel="noopener noreferrer" aria-label="Spotify" class="social-link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
+        <a href="https://music.apple.com/artist/djexpression" target="_blank" rel="noopener noreferrer" aria-label="Apple Music" class="social-link">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043A5.022 5.022 0 0 0 19.7.165a10.16 10.16 0 0 0-1.6-.123C17.22.015 16.34 0 14.14 0H9.87c-2.2 0-3.08.015-3.96.042a10.16 10.16 0 0 0-1.6.123 5.022 5.022 0 0 0-1.874.726C1.318 1.624.573 2.624.256 3.934a9.23 9.23 0 0 0-.24 2.19C-.01 7.004-.026 7.884-.026 10.084v3.832c0 2.2.015 3.08.042 3.96.027.74.105 1.478.24 2.19.317 1.31 1.062 2.31 2.18 3.043a5.022 5.022 0 0 0 1.874.726c.522.11 1.06.173 1.6.183.88.027 1.76.042 3.96.042h4.27c2.2 0 3.08-.015 3.96-.042a10.16 10.16 0 0 0 1.6-.183 5.022 5.022 0 0 0 1.874-.726c1.118-.733 1.863-1.733 2.18-3.043.135-.712.213-1.45.24-2.19.027-.88.042-1.76.042-3.96v-3.832c0-2.2-.015-3.08-.042-3.96zM16.95 17.08a1.89 1.89 0 0 1-1.395.96 1.84 1.84 0 0 1-.48.02c-.3-.03-.6-.12-.87-.27a3.19 3.19 0 0 1-.72-.54 8.14 8.14 0 0 1-.69-.78c-.48-.6-.75-.96-1.14-.96s-.66.36-1.14.96a8.14 8.14 0 0 1-.69.78 3.19 3.19 0 0 1-.72.54c-.27.15-.57.24-.87.27a1.84 1.84 0 0 1-.48-.02 1.89 1.89 0 0 1-1.395-.96c-.21-.36-.21-.75-.075-1.14.135-.39.39-.72.69-.99.36-.33.78-.57 1.2-.78V9.55a1.47 1.47 0 0 1 .93-1.38l3.15-1.26a.49.49 0 0 1 .66.33.49.49 0 0 1-.03.39l-3.15 1.26a.49.49 0 0 0-.3.48v5.25c.42.21.84.45 1.2.78.3.27.555.6.69.99.135.39.135.78-.075 1.14z"/></svg>
+        </a>
+        <a href="https://soundcloud.com/djexpression" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud" class="social-link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.057-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.172 1.282c.013.06.045.094.104.094.057 0 .09-.037.1-.094l.204-1.282-.204-1.332c-.01-.057-.043-.094-.1-.094m1.83-1.229c-.063 0-.11.049-.116.109l-.21 2.563.21 2.458c.007.064.053.112.115.112.063 0 .11-.048.116-.112l.246-2.458-.246-2.563c-.007-.06-.053-.109-.116-.109m.824-.373c-.069 0-.12.055-.124.12l-.193 2.936.193 2.793c.004.07.055.12.124.12.069 0 .12-.05.124-.12l.217-2.793-.217-2.936c-.004-.065-.055-.12-.124-.12m.826-.268c-.073 0-.128.059-.131.13l-.179 3.204.179 2.961c.003.078.058.13.131.13.072 0 .127-.052.13-.13l.202-2.961-.202-3.204c-.003-.071-.058-.13-.13-.13m.832-.186c-.08 0-.139.064-.14.14l-.168 3.39.168 3.049c.001.082.06.14.14.14.079 0 .138-.058.14-.14l.19-3.049-.19-3.39c-.002-.076-.061-.14-.14-.14m.84-.087c-.083 0-.146.068-.147.15l-.159 3.477.159 3.088c.001.09.064.15.147.15.083 0 .146-.06.148-.15l.178-3.088-.178-3.477c-.002-.082-.065-.15-.148-.15m.864.014c-.089 0-.155.074-.156.16l-.143 3.463.143 3.063c.001.094.067.16.156.16.087 0 .153-.066.156-.16l.162-3.063-.162-3.463c-.003-.086-.069-.16-.156-.16m.87-.03c-.093 0-.163.079-.164.17l-.135 3.493.135 3.035c.001.098.071.17.164.17.092 0 .162-.072.164-.17l.154-3.035-.154-3.493c-.002-.091-.072-.17-.164-.17m.873-.026c-.097 0-.17.084-.172.18l-.126 3.519.126 3.006c.002.104.075.18.172.18.096 0 .17-.076.172-.18l.143-3.006-.143-3.519c-.002-.096-.076-.18-.172-.18m.877-.014c-.103 0-.18.089-.18.19l-.12 3.533.12 2.97c0 .109.077.19.18.19.102 0 .18-.081.18-.19l.136-2.97-.136-3.533c0-.101-.078-.19-.18-.19m.882.012c-.107 0-.187.094-.188.2l-.109 3.521.109 2.939c.001.116.081.2.188.2.106 0 .186-.084.188-.2l.123-2.939-.123-3.521c-.002-.106-.082-.2-.188-.2m1.794.373c-.104 0-.19.094-.191.2l-.1 3.148.1 2.822c.001.116.087.2.191.2s.19-.084.191-.2l.112-2.822-.112-3.148c-.001-.106-.087-.2-.191-.2m.884-.307c-.112 0-.197.098-.198.21l-.092 3.455.092 2.846c.001.12.086.21.198.21.111 0 .196-.09.198-.21l.104-2.846-.104-3.455c-.002-.112-.087-.21-.198-.21m.882.006c-.116 0-.203.103-.204.22l-.088 3.449.088 2.827c.001.124.088.22.204.22.116 0 .203-.096.205-.22l.099-2.827-.099-3.449c-.002-.117-.089-.22-.205-.22m3.711-.72c-.206 0-.374.168-.378.374l-.074 4.17.074 2.693c.004.212.172.374.378.374.204 0 .373-.162.377-.374l.084-2.693-.084-4.17c-.004-.206-.173-.374-.377-.374m.892-.003c-.206 0-.381.173-.384.38l-.06 4.173.06 2.671c.003.214.178.38.384.38.205 0 .38-.166.384-.38l.068-2.671-.068-4.173c-.004-.207-.179-.38-.384-.38m.88.067c-.206 0-.387.178-.39.39l-.052 4.106.052 2.647c.003.218.184.39.39.39.205 0 .387-.172.39-.39l.058-2.647-.058-4.106c-.003-.212-.185-.39-.39-.39m.867.232c-.206 0-.393.183-.395.4l-.044 3.874.044 2.611c.002.224.189.4.395.4.205 0 .393-.176.396-.4l.05-2.611-.05-3.874c-.003-.217-.191-.4-.396-.4m4.684 3.39c0-2.453-1.992-4.445-4.445-4.445-.77 0-1.493.198-2.128.543A7.523 7.523 0 0 0 12.5 3.545C8.418 3.545 5.107 6.856 5.107 10.94c0 .262.014.521.04.776a.393.393 0 0 0-.04-.001c-.206 0-.393.183-.396.4l-.044 2.874.044 2.611c.003.224.19.4.396.4.205 0 .393-.176.395-.4l.05-2.611-.05-2.874c-.002-.012-.003-.022-.005-.033C5.357 7.547 8.38 4.545 12.1 4.545c3.507 0 6.393 2.678 6.709 6.1a4.44 4.44 0 0 0-1.364-.214c-2.453 0-4.445 1.992-4.445 4.445s1.992 4.445 4.445 4.445h5.123c1.819 0 3.296-1.477 3.296-3.296 0-1.82-1.477-3.297-3.296-3.297"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Slider — Past Events -->
+  <section class="photo-slider-section">
+    <div class="container">
+      <div class="section__header fade-in" style="margin-bottom: var(--space-6);">
+        <p class="section__label" data-editable>Past Events</p>
+        <h2 class="section__title" data-editable>Where The Energy Lives</h2>
+      </div>
+      <div class="photo-slider" id="photoSlider">
+        <div class="photo-slide photo-slide--active">
+          <img src="./assets/event_wedding.png" alt="Luxury wedding reception with DJ Expression">
+          <div class="photo-slide__caption">
+            <span class="photo-slide__tag">Wedding</span>
+            <h3>The Grand Ballroom</h3>
+            <p>An unforgettable night of love, lights, and the perfect playlist.</p>
+          </div>
+        </div>
+        <div class="photo-slide">
+          <img src="./assets/event_nightclub.png" alt="DJ Expression headlining a nightclub event">
+          <div class="photo-slide__caption">
+            <span class="photo-slide__tag">Live Set</span>
+            <h3>Lasers & Lights</h3>
+            <p>Headlining a packed nightclub — every hand in the air.</p>
+          </div>
+        </div>
+        <div class="photo-slide">
+          <img src="./assets/event_corporate.png" alt="Corporate gala event with rooftop DJ setup">
+          <div class="photo-slide__caption">
+            <span class="photo-slide__tag">Corporate Gala</span>
+            <h3>Rooftop Elegance</h3>
+            <p>Sophisticated soundtrack for a polished evening under city lights.</p>
+          </div>
+        </div>
+        <div class="photo-slide">
+          <img src="./assets/event_birthday.png" alt="Birthday party celebration with confetti and DJ">
+          <div class="photo-slide__caption">
+            <span class="photo-slide__tag">Birthday</span>
+            <h3>Confetti & Cake</h3>
+            <p>From the first toast to the last drop — keeping the floor packed.</p>
+          </div>
+        </div>
+        <div class="photo-slide">
+          <img src="./assets/event_dj_portrait.png" alt="DJ Expression behind the decks">
+          <div class="photo-slide__caption">
+            <span class="photo-slide__tag">In The Mix</span>
+            <h3>Live to Express, Not Impress</h3>
+            <p>Behind every set is a story — told one track at a time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo-slider__dots">
+        <button class="photo-slider__dot photo-slider__dot--active" aria-label="Slide 1"></button>
+        <button class="photo-slider__dot" aria-label="Slide 2"></button>
+        <button class="photo-slider__dot" aria-label="Slide 3"></button>
+        <button class="photo-slider__dot" aria-label="Slide 4"></button>
+        <button class="photo-slider__dot" aria-label="Slide 5"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section" style="padding-block: var(--space-8);">
+    <div class="container">
+      <div class="stats-bar fade-in">
+        <div>
+          <div class="stat__number">500+</div>
+          <div class="stat__label">Events</div>
+        </div>
+        <div>
+          <div class="stat__number">17+</div>
+          <div class="stat__label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat__number">4.9</div>
+          <div class="stat__label">Average Rating</div>
+        </div>
+        <div>
+          <div class="stat__number">100%</div>
+          <div class="stat__label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="section__label" data-editable>What I Do</p>
+        <h2 class="section__title" data-editable>Services</h2>
+        <p class="section__desc" data-editable>From intimate gatherings to grand celebrations, I bring the energy and soundtrack your event deserves.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-card__icon"><i data-lucide="heart" style="width:28px;height:28px"></i></div>
+          <h3 class="service-card__title">Weddings</h3>
+          <p class="service-card__desc">From the ceremony to the last dance, creating the perfect musical journey for your special day with seamless transitions and personalized playlists.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon"><i data-lucide="cake" style="width:28px;height:28px"></i></div>
+          <h3 class="service-card__title">Birthday Parties</h3>
+          <p class="service-card__desc">Celebrate in style with high-energy mixes tailored to your taste. From milestone birthdays to surprise parties, I keep the dance floor packed.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon"><i data-lucide="building-2" style="width:28px;height:28px"></i></div>
+          <h3 class="service-card__title">Corporate Events</h3>
+          <p class="service-card__desc">Professional atmosphere with the right soundtrack. Galas, holiday parties, product launches, and team celebrations with polished execution.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon"><i data-lucide="party-popper" style="width:28px;height:28px"></i></div>
+          <h3 class="service-card__title">Private Parties</h3>
+          <p class="service-card__desc">House parties, anniversary celebrations, quinceañeras, and more. Whatever the occasion, I bring the perfect vibe and energy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section class="section subscribe-section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="section__label" data-editable>Stay Connected</p>
+        <h2 class="section__title" data-editable>Get Exclusive Updates</h2>
+        <p class="section__desc" data-editable>Subscribe for event highlights, special promotions, and early booking access.</p>
+      </div>
+      <form class="subscribe-form fade-in" onsubmit="handleSubscribe(event)">
+        <input type="email" id="subscribeEmail" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn--gold">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- CALENDAR / BOOKING SECTION -->
+<section class="onepage-section" id="page-calendar">
+  <div class="section-handle" aria-hidden="true" title="Drag to reorder">&#x2630;</div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label" data-editable>Availability</p>
+        <h2 class="section__title" data-editable>Book Your Date</h2>
+        <p class="section__desc" data-editable>Check my availability below. Green dates are open — click one to start your booking request.</p>
+      </div>
+
+      <div class="calendar-wrapper">
+        <div class="calendar-nav">
+          <button onclick="changeMonth(-1)" aria-label="Previous month">
+            <i data-lucide="chevron-left" style="width:20px;height:20px"></i>
+          </button>
+          <h3 class="calendar-nav__title" id="calendarTitle"></h3>
+          <button onclick="changeMonth(1)" aria-label="Next month">
+            <i data-lucide="chevron-right" style="width:20px;height:20px"></i>
+          </button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+        <div class="calendar-legend">
+          <div class="calendar-legend__item">
+            <div class="calendar-legend__dot calendar-legend__dot--available"></div>
+            <span>Available</span>
+          </div>
+          <div class="calendar-legend__item">
+            <div class="calendar-legend__dot calendar-legend__dot--booked"></div>
+            <span>Booked</span>
+          </div>
+          <div class="calendar-legend__item">
+            <div class="calendar-legend__dot calendar-legend__dot--past"></div>
+            <span>Past</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form" id="bookingForm" style="display:none;">
+        <h3 class="booking-form__title">Request Booking</h3>
+        <p style="text-align:center;margin-bottom:var(--space-4);color:var(--color-gold);font-size:var(--text-sm);">
+          Selected Date: <strong id="selectedDateDisplay"></strong>
+        </p>
+        <form class="form-grid" onsubmit="handleBooking(event)">
+          <input type="hidden" id="bookingDate">
+          <div class="form-group">
+            <label for="bookingName">Full Name</label>
+            <input type="text" id="bookingName" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="bookingEmail">Email</label>
+            <input type="email" id="bookingEmail" required placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label for="bookingPhone">Phone</label>
+            <input type="tel" id="bookingPhone" placeholder="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="bookingEventType">Event Type</label>
+            <select id="bookingEventType" required>
+              <option value="">Select event type</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Birthday Party">Birthday Party</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Private Party">Private Party</option>
+              <option value="Quinceañera">Quinceañera</option>
+              <option value="Anniversary">Anniversary</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime">Event Time</label>
+            <input type="time" id="bookingTime" placeholder="7:00 PM">
+          </div>
+          <div class="form-group">
+            <label for="bookingGuests">Guest Count</label>
+            <input type="number" id="bookingGuests" min="1" placeholder="Estimated guests">
+          </div>
+          <div class="form-group form-group--full">
+            <label for="bookingVenue">Venue / Location</label>
+            <input type="text" id="bookingVenue" placeholder="Venue name and address">
+          </div>
+          <div class="form-group form-group--full">
+            <label for="bookingMessage">Message</label>
+            <textarea id="bookingMessage" placeholder="Tell me about your event, music preferences, special requests..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary" style="width:100%">Submit Booking Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- MEDIA SECTION -->
+<section class="onepage-section" id="page-media">
+  <div class="section-handle" aria-hidden="true" title="Drag to reorder">&#x2630;</div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label" data-editable>Past Events</p>
+        <h2 class="section__title" data-editable>Videos & Highlights</h2>
+        <p class="section__desc" data-editable>Watch highlights from past events and see the energy DJ Expression brings to every celebration.</p>
+      </div>
+      <div class="media-filters" id="mediaFilters">
+        <button class="media-filter-btn media-filter-btn--active" onclick="filterMedia('all')">All</button>
+        <button class="media-filter-btn" onclick="filterMedia('wedding')">Weddings</button>
+        <button class="media-filter-btn" onclick="filterMedia('highlight')">Highlights</button>
+        <button class="media-filter-btn" onclick="filterMedia('corporate')">Corporate</button>
+      </div>
+      <div class="media-grid" id="mediaGrid">
+        <!-- Curated YouTube videos from Dj Expression's channel -->
+        <div class="media-card fade-in" data-cat="highlight">
+          <div class="media-card__embed">
+            <iframe src="https://www.youtube.com/embed/zrWcQT9PrrA" title="Afrobeats Frequency Vol. 25" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="media-card__body">
+            <h3 class="media-card__title" data-editable>Afrobeats Frequency Vol. 25</h3>
+            <p class="media-card__desc" data-editable>Best Afrobeats 2026 Mix &mdash; Burna Boy, Rema, Asake, Tyla, Wizkid.</p>
+          </div>
+        </div>
+        <div class="media-card fade-in" data-cat="highlight">
+          <div class="media-card__embed">
+            <iframe src="https://www.youtube.com/embed/m9eP4-nMieg" title="90s Hip Hop & R&B / Afrobeats / Amapiano Party Mix" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="media-card__body">
+            <h3 class="media-card__title" data-editable>Global House Party Recap</h3>
+            <p class="media-card__desc" data-editable>90s Hip Hop &amp; R&amp;B into Afrobeats &amp; Amapiano party energy.</p>
+          </div>
+        </div>
+        <div class="media-card fade-in" data-cat="highlight">
+          <div class="media-card__embed">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_nUDESwgpckIXQHn_57uUC70dtmBLT0Vm4" title="AFROBEAT Vol. 21" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="media-card__body">
+            <h3 class="media-card__title" data-editable>AFROBEAT, Vol. 21</h3>
+            <p class="media-card__desc" data-editable>Studio mix &mdash; full album playlist on YouTube Music.</p>
+          </div>
+        </div>
+        <div class="media-card fade-in" data-cat="highlight">
+          <div class="media-card__embed media-card__embed--channel">
+            <a href="https://www.youtube.com/@DjExpression_" target="_blank" rel="noopener noreferrer" class="channel-cta">
+              <span class="channel-cta__badge">YouTube</span>
+              <span class="channel-cta__handle">@DjExpression_</span>
+              <span class="channel-cta__cta">Subscribe for weekly mixes &rarr;</span>
+            </a>
+          </div>
+          <div class="media-card__body">
+            <h3 class="media-card__title" data-editable>More on YouTube</h3>
+            <p class="media-card__desc" data-editable>New mixes drop every week. Hit subscribe and ring the bell.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section class="onepage-section" id="page-reviews">
+  <div class="section-handle" aria-hidden="true" title="Drag to reorder">&#x2630;</div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label" data-editable>Testimonials</p>
+        <h2 class="section__title" data-editable>What Guests Say</h2>
+        <p class="section__desc" data-editable>Real reviews from real clients. See why guests keep coming back.</p>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid">
+        <div class="empty-state">
+          <p>Loading reviews...</p>
+        </div>
+      </div>
+
+      <!-- Leave a Review Form -->
+      <div class="review-form">
+        <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:600;margin-bottom:var(--space-6);text-align:center;">Leave a Review</h3>
+        <form class="form-grid" onsubmit="handleReview(event)">
+          <div class="form-group">
+            <label for="reviewName">Your Name</label>
+            <input type="text" id="reviewName" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="reviewEventType">Event Type</label>
+            <select id="reviewEventType">
+              <option value="">Select type</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Birthday Party">Birthday Party</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Private Party">Private Party</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label>Rating</label>
+            <div class="star-rating-input">
+              <input type="radio" name="rating" value="5" id="star5"><label for="star5">&#9733;</label>
+              <input type="radio" name="rating" value="4" id="star4"><label for="star4">&#9733;</label>
+              <input type="radio" name="rating" value="3" id="star3"><label for="star3">&#9733;</label>
+              <input type="radio" name="rating" value="2" id="star2"><label for="star2">&#9733;</label>
+              <input type="radio" name="rating" value="1" id="star1"><label for="star1">&#9733;</label>
+            </div>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="reviewText">Your Review</label>
+            <textarea id="reviewText" required placeholder="Share your experience..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--primary" style="width:100%">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- MERCH SECTION -->
+<section class="onepage-section" id="page-merch">
+  <div class="section-handle" aria-hidden="true" title="Drag to reorder">&#x2630;</div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label" data-editable>Official Merch</p>
+        <h2 class="section__title" data-editable>Hats, Shirts &amp; Hoodies</h2>
+        <p class="section__desc" data-editable>Rep the brand. Premium streetwear inspired by the DJ Expression aesthetic &mdash; black, red, and gold.</p>
+      </div>
+      <div class="merch-grid" id="merchGrid">
+        <article class="merch-card fade-in" data-merch-id="hat-snapback">
+          <div class="merch-card__media merch-card__media--hat">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><linearGradient id="hatGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#000"/></linearGradient></defs>
+              <ellipse cx="100" cy="112" rx="86" ry="10" fill="#0a0a0a"/>
+              <path d="M30 92 Q100 30 170 92 L170 100 Q100 84 30 100 Z" fill="url(#hatGrad)"/>
+              <path d="M14 102 Q100 84 186 102 L186 110 Q100 100 14 110 Z" fill="#0d0d0d"/>
+              <text x="100" y="78" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="18" fill="#d4a844">DJ</text>
+              <text x="100" y="78" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="18" fill="#c81e1e" dx="18">E</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>DJ Expression Snapback</h3>
+            <p class="merch-card__desc" data-editable>Embroidered logo. Black with gold &amp; red stitching. One size, adjustable.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$29.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('DJ Expression Snapback', 29.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="merch-card fade-in" data-merch-id="hat-dad">
+          <div class="merch-card__media merch-card__media--hat">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <ellipse cx="100" cy="112" rx="82" ry="9" fill="#0a0a0a"/>
+              <path d="M34 96 Q100 38 166 96 L164 102 Q100 88 36 102 Z" fill="#c81e1e"/>
+              <path d="M22 104 Q100 90 178 104 L178 110 Q100 100 22 110 Z" fill="#a81616"/>
+              <text x="100" y="82" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="14" fill="#d4a844">EXPRESSION</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>Expression Dad Hat (Red)</h3>
+            <p class="merch-card__desc" data-editable>Unstructured cotton dad hat. Gold &ldquo;EXPRESSION&rdquo; embroidery.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$24.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('Expression Dad Hat (Red)', 24.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="merch-card fade-in" data-merch-id="shirt-tee">
+          <div class="merch-card__media merch-card__media--shirt">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M40 50 L70 30 L80 40 Q100 56 120 40 L130 30 L160 50 L150 80 L130 70 L130 180 L70 180 L70 70 L50 80 Z" fill="#111"/>
+              <text x="100" y="110" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="16" fill="#fff">DJ</text>
+              <text x="100" y="110" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="16" fill="#d4a844" dx="22">E</text>
+              <line x1="118" y1="100" x2="134" y2="118" stroke="#c81e1e" stroke-width="2.5"/>
+              <line x1="134" y1="100" x2="118" y2="118" stroke="#c81e1e" stroke-width="2.5"/>
+              <text x="100" y="110" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="16" fill="#d4a844" dx="40">XPRESSION</text>
+              <text x="100" y="140" text-anchor="middle" font-family="system-ui" font-size="9" fill="#aaa" letter-spacing="3">LIVE TO EXPRESS NOT IMPRESS</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>Logo Tee &mdash; Black</h3>
+            <p class="merch-card__desc" data-editable>Heavyweight 100% cotton. Gold &amp; red logo print. Sizes S&ndash;3XL.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$34.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('Logo Tee - Black', 34.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="merch-card fade-in" data-merch-id="shirt-tour">
+          <div class="merch-card__media merch-card__media--shirt">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M40 50 L70 30 L80 40 Q100 56 120 40 L130 30 L160 50 L150 80 L130 70 L130 180 L70 180 L70 70 L50 80 Z" fill="#1a1a1a"/>
+              <text x="100" y="90" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="22" fill="#d4a844">TOUR</text>
+              <text x="100" y="112" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="22" fill="#fff">2026</text>
+              <text x="100" y="138" text-anchor="middle" font-family="system-ui" font-size="7" fill="#888" letter-spacing="2">DALLAS &middot; HOUSTON &middot; ATL &middot; LA</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>Tour Tee &mdash; 2026</h3>
+            <p class="merch-card__desc" data-editable>Limited tour shirt with city list on the back. Premium cotton blend.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$39.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('Tour Tee 2026', 39.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="merch-card fade-in" data-merch-id="hoodie-pullover">
+          <div class="merch-card__media merch-card__media--hoodie">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M40 60 L70 36 Q85 30 100 38 Q115 30 130 36 L160 60 L152 92 L132 84 L132 184 L68 184 L68 84 L48 92 Z" fill="#0a0a0a"/>
+              <path d="M85 30 Q100 22 115 30 L120 56 Q100 64 80 56 Z" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+              <line x1="94" y1="60" x2="94" y2="110" stroke="#1f1f1f" stroke-width="1.5"/>
+              <line x1="106" y1="60" x2="106" y2="110" stroke="#1f1f1f" stroke-width="1.5"/>
+              <text x="100" y="140" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="14" fill="#d4a844">EXPRESSION</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>Pullover Hoodie &mdash; Black</h3>
+            <p class="merch-card__desc" data-editable>450gsm fleece. Gold chest embroidery, kangaroo pocket. S&ndash;3XL.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$59.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('Pullover Hoodie - Black', 59.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="merch-card fade-in" data-merch-id="hoodie-zip">
+          <div class="merch-card__media merch-card__media--hoodie">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M40 60 L70 36 Q85 30 100 38 Q115 30 130 36 L160 60 L152 92 L132 84 L132 184 L68 184 L68 84 L48 92 Z" fill="#1a1a1a"/>
+              <line x1="100" y1="40" x2="100" y2="184" stroke="#d4a844" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <circle cx="100" cy="60" r="3" fill="#d4a844"/>
+              <text x="100" y="150" text-anchor="middle" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="10" fill="#fff">DJ EXPRESSION</text>
+            </svg>
+          </div>
+          <div class="merch-card__body">
+            <h3 class="merch-card__title" data-editable>Zip Hoodie &mdash; Charcoal</h3>
+            <p class="merch-card__desc" data-editable>Premium full-zip with gold zipper accent. Tonal logo. S&ndash;3XL.</p>
+            <div class="merch-card__row">
+              <span class="merch-card__price" data-editable>$69.99</span>
+              <button class="btn btn--primary btn--sm" onclick="addToMerchOrder('Zip Hoodie - Charcoal', 69.99)">Add to Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div id="merchCart" class="merch-cart" style="display:none;">
+        <h3 class="merch-cart__title">Your Order</h3>
+        <ul id="merchCartList" class="merch-cart__list"></ul>
+        <div class="merch-cart__total">
+          <span>Total</span>
+          <strong id="merchCartTotal">$0.00</strong>
+        </div>
+        <button class="btn btn--primary" onclick="checkoutMerch()">Request to Order</button>
+        <button class="btn btn--ghost btn--sm" onclick="clearMerchOrder()">Clear</button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- EVENT FILES SECTION -->
+<section class="onepage-section" id="page-files">
+  <div class="section-handle" aria-hidden="true" title="Drag to reorder">&#x2630;</div>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label" data-editable>Your Memories</p>
+        <h2 class="section__title" data-editable>Event Files</h2>
+        <p class="section__desc" data-editable>Download photos and files from your event. Browse by event below.</p>
+      </div>
+      <div class="events-list" id="eventsFileList">
+        <div class="empty-state">
+          <div class="empty-state__icon"><i data-lucide="image" style="width:48px;height:48px"></i></div>
+          <p>No event files available yet. Check back after your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ADMIN PAGE (hidden by default, shown only via #admin hash) -->
+<section class="onepage-section onepage-section--admin" id="page-admin" style="display:none;">
+  <section class="section">
+    <div class="container">
+      <div id="adminAuth" class="admin-login">
+        <h2 style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:var(--space-6);">Admin Access</h2>
+        <input type="password" id="adminPin" placeholder="Enter PIN" maxlength="10">
+        <br>
+        <button class="btn btn--primary" onclick="adminLogin()" style="width:100%">Enter</button>
+      </div>
+
+      <div id="adminPanel" style="display:none;">
+        <h2 style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:var(--space-6);">Admin Dashboard</h2>
+        <div class="admin-tabs">
+          <button class="admin-tab admin-tab--active" onclick="switchAdminTab('bookings')" data-admintab="bookings">Bookings</button>
+          <button class="admin-tab" onclick="switchAdminTab('calendar-mgmt')" data-admintab="calendar-mgmt">Calendar</button>
+          <button class="admin-tab" onclick="switchAdminTab('reviews-mgmt')" data-admintab="reviews-mgmt">Reviews</button>
+          <button class="admin-tab" onclick="switchAdminTab('media-mgmt')" data-admintab="media-mgmt">Media</button>
+          <button class="admin-tab" onclick="switchAdminTab('files-mgmt')" data-admintab="files-mgmt">Event Files</button>
+          <button class="admin-tab" onclick="switchAdminTab('subscribers-mgmt')" data-admintab="subscribers-mgmt">Subscribers</button>
+        </div>
+
+        <!-- Bookings Tab -->
+        <div class="admin-content" id="tab-bookings">
+          <div class="admin-table" id="adminBookingsTable"></div>
+        </div>
+
+        <!-- Calendar Management Tab -->
+        <div class="admin-content" id="tab-calendar-mgmt" style="display:none;">
+          <div class="admin-form">
+            <h3>Block a Date</h3>
+            <div class="form-grid" style="max-width:400px;">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="blockDate">
+              </div>
+              <div class="form-group">
+                <label>Reason</label>
+                <input type="text" id="blockReason" value="booked" placeholder="Reason">
+              </div>
+              <div class="form-submit" style="grid-column:1/-1;">
+                <button class="btn btn--primary btn--sm" onclick="blockDate()">Block Date</button>
+              </div>
+            </div>
+          </div>
+          <div class="admin-table" id="adminCalendarTable"></div>
+        </div>
+
+        <!-- Reviews Management Tab -->
+        <div class="admin-content" id="tab-reviews-mgmt" style="display:none;">
+          <div class="admin-table" id="adminReviewsTable"></div>
+        </div>
+
+        <!-- Media Management Tab -->
+        <div class="admin-content" id="tab-media-mgmt" style="display:none;">
+          <div class="admin-form">
+            <h3>Add Media</h3>
+            <div class="form-grid" style="max-width:600px;">
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="mediaTitle" required placeholder="Video title">
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="mediaCategory">
+                  <option value="highlight">Highlight</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="corporate">Corporate</option>
+                </select>
+              </div>
+              <div class="form-group form-group--full">
+                <label>YouTube Embed URL</label>
+                <input type="url" id="mediaUrl" required placeholder="https://www.youtube.com/embed/...">
+              </div>
+              <div class="form-group form-group--full">
+                <label>Description</label>
+                <input type="text" id="mediaDesc" placeholder="Short description">
+              </div>
+              <div class="form-submit" style="grid-column:1/-1;">
+                <button class="btn btn--primary btn--sm" onclick="addMedia()">Add Media</button>
+              </div>
+            </div>
+          </div>
+          <div class="admin-table" id="adminMediaTable"></div>
+        </div>
+
+        <!-- Files Management Tab -->
+        <div class="admin-content" id="tab-files-mgmt" style="display:none;">
+          <div class="admin-form">
+            <h3>Add Event File</h3>
+            <div class="form-grid" style="max-width:600px;">
+              <div class="form-group">
+                <label>Event Name</label>
+                <input type="text" id="fileEventName" required placeholder="e.g. Smith Wedding">
+              </div>
+              <div class="form-group">
+                <label>Event Date</label>
+                <input type="date" id="fileEventDate">
+              </div>
+              <div class="form-group">
+                <label>File Name</label>
+                <input type="text" id="fileName" required placeholder="photo_001.jpg">
+              </div>
+              <div class="form-group">
+                <label>File URL</label>
+                <input type="url" id="fileUrl" required placeholder="https://...">
+              </div>
+              <div class="form-group">
+                <label>Type</label>
+                <select id="fileType">
+                  <option value="photo">Photo</option>
+                  <option value="video">Video</option>
+                  <option value="audio">Audio</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Price ($)</label>
+                <input type="number" id="filePrice" step="0.01" value="2.99" min="0">
+              </div>
+              <div class="form-submit" style="grid-column:1/-1;">
+                <button class="btn btn--primary btn--sm" onclick="addFile()">Add File</button>
+              </div>
+            </div>
+          </div>
+          <div class="admin-table" id="adminFilesTable"></div>
+        </div>
+
+        <!-- Subscribers Tab -->
+        <div class="admin-content" id="tab-subscribers-mgmt" style="display:none;">
+          <div style="margin-bottom:var(--space-4);">
+            <button class="btn btn--outline btn--sm" onclick="exportSubscribers()">
+              <i data-lucide="download" style="width:14px;height:14px"></i>
+              Export Emails
+            </button>
+          </div>
+          <div class="admin-table" id="adminSubscribersTable"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="header__logo" onclick="return scrollToSection('home', event)" style="display:inline-flex;">
+          <svg viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__logo-svg" style="width:180px;height:32px;">
+            <text x="0" y="28" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="1">DJ</text>
+            <text x="42" y="28" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="24" fill="#d4a844" letter-spacing="0.5">E</text>
+            <line x1="42" y1="6" x2="58" y2="30" stroke="#c81e1e" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="58" y1="6" x2="42" y2="30" stroke="#c81e1e" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="56" y="28" font-family="'Clash Display', Arial Black, sans-serif" font-weight="700" font-size="24" fill="#d4a844" letter-spacing="0.5">XPRESSION</text>
+          </svg>
+        </a>
+        <p>Live to Express Not Impress. Premium DJ services for weddings, birthdays, corporate events, and private parties in the DFW area.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/djexpression/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link social-link--sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@djexpression_" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link social-link--sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.78a8.28 8.28 0 0 0 4.76 1.5V6.83a4.84 4.84 0 0 1-1-.14z"/></svg></a>
+          <a href="https://twitter.com/djexpression500" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter @djexpression500" class="social-link social-link--sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@djexpression500" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link social-link--sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.facebook.com/djexpression500/" target="_blank" rel="noopener noreferrer" aria-label="Facebook @djexpression500" class="social-link social-link--sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://open.spotify.com/artist/djexpression" target="_blank" rel="noopener noreferrer" aria-label="Spotify" class="social-link social-link--sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+          <a href="https://soundcloud.com/djexpression" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud" class="social-link social-link--sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.057-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.172 1.282c.013.06.045.094.104.094.057 0 .09-.037.1-.094l.204-1.282-.204-1.332c-.01-.057-.043-.094-.1-.094"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <a href="#home" onclick="return scrollToSection('home', event)">Home</a>
+        <a href="#calendar" onclick="return scrollToSection('calendar', event)">Book Now</a>
+        <a href="#media" onclick="return scrollToSection('media', event)">Media</a>
+        <a href="#reviews" onclick="return scrollToSection('reviews', event)">Reviews</a>
+        <a href="#files" onclick="return scrollToSection('files', event)">Event Files</a>
+      </div>
+      <div class="footer__links">
+        <h4>Contact</h4>
+        <a href="mailto:info@djexpression.com" target="_blank" rel="noopener noreferrer">info@djexpression.com</a>
+        <a href="#">Denton, Texas</a>
+        <a href="#admin" onclick="return scrollToSection('admin', event)">Admin</a>
+        <a href="#editor" onclick="enterEditorMode(event)">Edit Mode</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 DJ Expression. All rights reserved.</p>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="./app.js"></script>
+</body>
+</html>
